@@ -36,67 +36,71 @@ class DB1
 class DB
 {
     private static  $_connections = array();
-    private $_connection = null;
-    private $_error = '';
-
+    //private $_connection = null;
+    private $_conName;
 
     /**
      * 构造函数
      * Model constructor.
      * @param string $instance
-     * @throws CuteException
+     * @throws Exception
      */
-    public function __construct($instance = 'default'){
+    public static function getConnection($instance='default'){
         if(!is_string($instance))
             throw new Exception( "instance must be string",500);
-        if(isset(self::$_connections[$instance])){
-            $this->_connection=self::$_connections[$instance];
-            return;
+        if(!isset(self::$_connections[$instance])){
+            //读取数据库配置
+            $config = C('database');
+            if (!is_array($config[$instance]))
+                throw new Exception( "$instance config must be array",500);
+            //连接数据库
+            $db = $config[$instance];
+            $type=$db['type'];
+            $host= $db['host'];
+            $port=$db['port'];
+            $database= $db['database'];
+            $username=$db['username'] ;
+            $password=$db['password'];
+
+            $dsn = "$type:host=$host;";
+            if($port > 0) $dsn .= "port=$port;";
+            if(isset($database)) $dsn .= "dbname=$database";
+
+            $_con = new PDO($dsn, $username, $password,array(
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION//错误处理
+                //PDO::ATTR_PERSISTENT => true//持久化连接
+            ));
+            $_con->exec("SET NAMES 'utf8'");
+            self::$_connections[$instance]=$_con;
         }
+        return self::$_connections[$instance];
+    }
+    public function closeConnection(){
 
-        //读取数据库配置
-        $config = Cute::C('database');
-        if (!is_array($config[$instance]))
-            throw new Exception( "$instance config must be array",500);
-        //连接数据库
-        $db = $config[$instance];
-        $type=$db['type'];
-        $host= $db['host'];
-        $port=$db['port'];
-        $database= $db['database'];
-        $username=$db['username'] ;
-        $password=$db['password'];
-
-        $dsn = "$type:host=$host;";
-        if($port > 0) $dsn .= "port=$port;";
-        if(isset($database)) $dsn .= "dbname=$database";
-
-        $this->_connection = new PDO($dsn, $username, $password,array(
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION//错误处理
-            //PDO::ATTR_PERSISTENT => true//持久化连接
-        ));
-        $this->_connection->exec("SET NAMES 'utf8'");
-        self::$_connections[$instance]=$this->_connection;
     }
 
+    public function __construct($instance = 'default'){
+        $dbh=self::getConnection('default');
+        $this->_conName=$instance;
+    }
 
     /**
-     * 连接数据库，如果不指定参数，但使用配置文件中默认的数据
-     * @param string $type
-     * @param string $host
-     * @param int    $port
-     * @param string $database
-     * @param string $username
-     * @param string $password
-     * @return bool
+     * 防止克隆
+     *
      */
-
+    private function __clone() {}
     /**
-     * 获取数据库连接
-     * @return null|PDO
+     * 执行数据库操作，返回影响行数
+     * @param $sql
+     * @return int|null
+     * @throws Exception
      */
-    public function getConnection(){
-        return $this->_connection;
+    protected function _execute($sql){
+        $dbh=self::getConnection($this->_conName);
+        $num = $dbh->exec($sql);
+        if(FALSE === $num)
+            throw new PDOException(var_export($dbh->errorInfo(), true));
+        return $num;
     }
 
     /**
@@ -106,13 +110,12 @@ class DB
      * @throws Exception
      */
     protected function _query($sql){
-        if(is_null($this->_connection))
-            throw new Exception('Connection is null.');
+        $dbh=self::getConnection($this->_conName);
 
-        $res = $this->_connection->query($sql);
+        $res = $dbh->query($sql);
         //如果产生SQL语句错误，直接抛出
         if(FALSE === $res)
-            throw new PDOException(var_export($this->_connection->errorInfo(), true));
+            throw new PDOException(var_export($dbh->errorInfo(), true));
         return $res->fetchAll(PDO::FETCH_ASSOC); //不返回数字索引
     }
 
@@ -124,12 +127,10 @@ class DB
      * @throws Exception
      */
     protected function _prepareExecute($sql, array $params=null){
-        if(is_null($this->_connection))
-            throw new Exception('Connection is null.');
-
-        $ps = $this->_connection->prepare($sql);
+        $dbh=self::getConnection($this->_conName);
+        $ps = $dbh->prepare($sql);
         if(FALSE === $ps)
-            throw new PDOException(var_export($this->_connection->errorInfo(), true));
+            throw new PDOException(var_export($dbh->errorInfo(), true));
 
         $ret = $ps->execute($params);
         if(FALSE === $ret)
@@ -145,17 +146,25 @@ class DB
      * @throws Exception
      */
     protected function _prepareQuery($sql, array $params=null){
-        if(is_null($this->_connection))
-            throw new Exception('Connection is null.');
-
-        $ps = $this->_connection->prepare($sql);
+        $dbh=self::getConnection($this->_conName);
+        $ps = $dbh->prepare($sql);
         if(FALSE === $ps)
-            throw new PDOException(var_export($this->_connection->errorInfo(), true));
+            throw new PDOException(var_export($dbh->errorInfo(), true));
 
         $ret = $ps->execute($params);
         if(FALSE === $ret)
             throw new PDOException(var_export($ps->errorInfo(), true));
         return $ps->fetchAll(PDO::FETCH_ASSOC); //不返回数字索引
+    }
+
+    /**
+     * 获取插入操作生成的自增ID
+     * @return int|string
+     * @throws Exception
+     */
+    protected function _lastInsertId(){
+        $dbh=self::getConnection($this->_conName);
+        return $dbh->lastInsertId();
     }
 
     /**
@@ -190,47 +199,12 @@ class DB
      * @throws Exception
      */
     protected function _updateFieldById($table, $field, $id, $value){
-        if(is_null($this->_connection))
-            throw new Exception('Connection is null.');
-
         return $this->_prepareExecute(
             "UPDATE $table SET $field=:value WHERE id=:id ",
             [":value"=>$value, ':id'=>$id]);
     }
 
-    /**
-     * 获取插入操作生成的自增ID
-     * @return int|string
-     * @throws Exception
-     */
-    protected function _lastInsertId(){
-        if(is_null($this->_connection))
-            throw new Exception('Connection is null.');
-        return $this->_connection->lastInsertId();
-    }
 
-
-
-
-
-
-//这封装的一点都不好
-
-    /**
-     * 执行数据库操作，返回影响行数
-     * @param $sql
-     * @return int|null
-     * @throws Exception
-     */
-    protected function _execute($sql){
-        if(is_null($this->_connection))
-            throw new Exception('Connection is null.');
-
-        $num = $this->_connection->exec($sql);
-        if(FALSE === $num)
-            throw new PDOException(var_export($this->_connection->errorInfo(), true));
-        return $num;
-    }
 
     /**
      * 开启一个数据库事务
@@ -238,9 +212,8 @@ class DB
      * @throws Exception
      */
     public function begin(){
-        if(is_null($this->_connection))
-            throw new Exception('Connection is null.');
-        return $this->_connection->beginTransaction();
+        $dbh=self::getConnection($this->_conName);
+        return $dbh->beginTransaction();
     }
 
     /**
@@ -249,9 +222,8 @@ class DB
      * @throws Exception
      */
     public function commit(){
-        if(is_null($this->_connection))
-            throw new Exception('Connection is null.');
-        return $this->_connection->commit();
+        $dbh=self::getConnection($this->_conName);
+        return $dbh>commit();
     }
 
     /**
@@ -260,9 +232,8 @@ class DB
      * @throws Exception
      */
     public function rollback(){
-        if(is_null($this->_connection))
-            throw new Exception('Connection is null.');
-        return $this->_connection->rollBack();
+        $dbh=self::getConnection($this->_conName);
+        return $dbh->rollBack();
     }
 }
 

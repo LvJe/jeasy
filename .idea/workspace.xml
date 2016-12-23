@@ -51,13 +51,13 @@
       <file leaf-file-name="DB.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mvc/lib/DB.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.044142615">
-              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.61799663">
+              <caret line="105" column="7" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
               <folding>
                 <element signature="e#7#88#0#PHP" expanded="true" />
-                <marker date="1482477612410" expanded="true" signature="775:809" placeholder="SELECT wrong..wrongtable..." />
-                <marker date="1482477612410" expanded="true" signature="4906:4944" placeholder="SELECT ${$fi..${$table}..." />
-                <marker date="1482477612410" expanded="true" signature="5467:5511" placeholder="UPDATE ${$ta..." />
+                <marker date="1482477940159" expanded="true" signature="775:809" placeholder="SELECT wrong..wrongtable..." />
+                <marker date="1482477940159" expanded="true" signature="5146:5184" placeholder="SELECT ${$fi..${$table}..." />
+                <marker date="1482477940159" expanded="true" signature="5610:5654" placeholder="UPDATE ${$ta..." />
               </folding>
             </state>
           </provider>
@@ -382,7 +382,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3806735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -651,13 +651,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mvc/lib/DB.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.044142615">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.61799663">
+          <caret line="105" column="7" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
           <folding>
             <element signature="e#7#88#0#PHP" expanded="true" />
-            <marker date="1482477612410" expanded="true" signature="775:809" placeholder="SELECT wrong..wrongtable..." />
-            <marker date="1482477612410" expanded="true" signature="4906:4944" placeholder="SELECT ${$fi..${$table}..." />
-            <marker date="1482477612410" expanded="true" signature="5467:5511" placeholder="UPDATE ${$ta..." />
+            <marker date="1482477940159" expanded="true" signature="775:809" placeholder="SELECT wrong..wrongtable..." />
+            <marker date="1482477940159" expanded="true" signature="5146:5184" placeholder="SELECT ${$fi..${$table}..." />
+            <marker date="1482477940159" expanded="true" signature="5610:5654" placeholder="UPDATE ${$ta..." />
           </folding>
         </state>
       </provider>
