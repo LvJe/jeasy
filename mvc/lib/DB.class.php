@@ -75,8 +75,10 @@ class DB
         }
         return self::$_connections[$instance];
     }
-    public function closeConnection(){
-
+    public static function closeConnection($instance='default'){
+        if((!is_string($instance))||(!isset(self::$_connections[$instance]))) return;
+        self::$_connections[$instance]=null;
+        unset(self::$_connections[$instance]);
     }
 
     public function __construct($instance = 'default'){
@@ -88,7 +90,7 @@ class DB
      * 防止克隆
      *
      */
-    private function __clone() {}
+    protected function __clone() {}
     /**
      * 执行数据库操作，返回影响行数
      * @param $sql
@@ -166,44 +168,6 @@ class DB
         $dbh=self::getConnection($this->_conName);
         return $dbh->lastInsertId();
     }
-
-    /**
-     * 按ID查询某表中的一个字段
-     * @param $table
-     * @param $field
-     * @param $id
-     * @return null
-     * @throws Exception
-     */
-    protected function _queryFieldById($table, $field, $id){
-        if(!is_string($table) || !is_string($field) || !is_int($id))
-            throw new Exception('Parameters invalid.');
-
-        $res = $this->_prepareQuery(
-            "SELECT $field FROM $table WHERE id=:id ",
-            [':id'=>$id]);
-
-        if(count($res) > 0)
-            return $res[0][$field];
-        else
-            return null;
-    }
-
-    /**
-     * 按ID修改某表中的一个字段
-     * @param $table
-     * @param $field
-     * @param $id
-     * @param $value
-     * @return bool
-     * @throws Exception
-     */
-    protected function _updateFieldById($table, $field, $id, $value){
-        return $this->_prepareExecute(
-            "UPDATE $table SET $field=:value WHERE id=:id ",
-            [":value"=>$value, ':id'=>$id]);
-    }
-
 
 
     /**
