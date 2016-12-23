@@ -15,3 +15,4 @@ date 2016.12.22
 给DB类新增close()和closeAll()静态方法，以便及时断开数据库连接，增强数据库对高并发的处理。
 
 date 2016.12.23
+如何实现RESTFUL风格，目前需要加强delete，post，put操作的安全性。
