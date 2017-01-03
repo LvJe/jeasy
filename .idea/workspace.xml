@@ -23,63 +23,7 @@
     <favorites_list name="jeasy" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="DB.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mvc/lib/DB.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-67.34426">
-              <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-              <folding>
-                <element signature="e#7#88#0#PHP" expanded="true" />
-                <marker date="1482479910821" expanded="true" signature="775:809" placeholder="SELECT wrong..wrongtable..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Model.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mvc/core/Model.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-39.448277">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding>
-                <marker date="1482480069752" expanded="true" signature="494:532" placeholder="SELECT ${$fi..${$table}..." />
-                <marker date="1482480069752" expanded="true" signature="959:1003" placeholder="UPDATE ${$ta..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.tpl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/test.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29307568">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controller/api/IndexController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.862069">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="toJE.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/toJE.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.tpl">
           <provider selected="true" editor-type-id="text-editor">
@@ -90,49 +34,102 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="View.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mvc/core/View.class.php">
+      <file leaf-file-name="JEasy.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mvc/JEasy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.137932">
-              <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+            <state vertical-scroll-proportion="-10.75862">
+              <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmartyJE.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mvc/lib/SmartyJE.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.8965517">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_superglobals.php" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_superglobals.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.5172415">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MVC.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mvc/core/MVC.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.66827697">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Request.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mvc/lib/Request.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.137931">
+              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mvc/core/Controller.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.0491805">
+              <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Router.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mvc/core/Router.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.4262295">
+              <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controller/IndexController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.75862">
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controller/TestController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.827587">
+              <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
               <folding>
-                <element signature="e#7#118#0#PHP" expanded="true" />
+                <marker date="1483408232800" expanded="true" signature="722:741" placeholder="SELECT * FRO..user1..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mvc/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.137931">
-              <caret line="230" column="9" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JEasy.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mvc/JEasy.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-51.103447">
-              <caret line="57" column="100" selection-start-line="57" selection-start-column="74" selection-end-line="57" selection-end-column="100" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.689655">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -144,23 +141,27 @@
         <option value="$PROJECT_DIR$/mvc/core/MVC.php" />
         <option value="$PROJECT_DIR$/application/controller/TestController.php" />
         <option value="$PROJECT_DIR$/mvc/autoLoader.php" />
-        <option value="$PROJECT_DIR$/mvc/core/MVC.class.php" />
         <option value="$PROJECT_DIR$/templates/index.tpl" />
-        <option value="$PROJECT_DIR$/application/controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/mvc/lib/Template.class.php" />
         <option value="$PROJECT_DIR$/mvc/core/View.class.php" />
-        <option value="$PROJECT_DIR$/mvc/JEasy.php" />
         <option value="$PROJECT_DIR$/mvc/lib/DB.php" />
         <option value="$PROJECT_DIR$/mvc/functions.php" />
         <option value="$PROJECT_DIR$/mvc/core/Controller.class.php" />
-        <option value="$PROJECT_DIR$/mvc/core/Router.class.php" />
-        <option value="$PROJECT_DIR$/application/controller/TestController.class.php" />
         <option value="$PROJECT_DIR$/mvc/lib/SmartyJE.class.php" />
         <option value="$PROJECT_DIR$/mvc/lib/DB.class.php" />
         <option value="$PROJECT_DIR$/mvc/core/Model.class.php" />
         <option value="$PROJECT_DIR$/application/controller/api/IndexController.class.php" />
         <option value="$PROJECT_DIR$/toJE.txt" />
         <option value="$PROJECT_DIR$/templates/test.tpl" />
+        <option value="$PROJECT_DIR$/mvc/config/database.ini" />
+        <option value="$PROJECT_DIR$/application/controller/IndexController.class.php" />
+        <option value="$PROJECT_DIR$/mvc/assistantFun.php" />
+        <option value="$PROJECT_DIR$/mvc/lib/Request.php" />
+        <option value="$PROJECT_DIR$/application/controller/TestController.class.php" />
+        <option value="$PROJECT_DIR$/mvc/core/Router.class.php" />
+        <option value="$PROJECT_DIR$/mvc/JEasy.php" />
+        <option value="$PROJECT_DIR$/mvc/lib/Request.class.php" />
+        <option value="$PROJECT_DIR$/mvc/core/MVC.class.php" />
       </list>
     </option>
   </component>
@@ -210,6 +211,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -254,6 +256,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -317,21 +337,20 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="D:/web_pro/CuteCloud" />
+    <property name="last_opened_file_path" value="D:/web_program/zhencare" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\jeasy\application" />
+      <recent name="D:\jeasy\mvc\config" />
+      <recent name="D:\jeasy\common" />
       <recent name="D:\jeasy\application\controller\api" />
       <recent name="D:\jeasy\templates" />
-      <recent name="D:\jeasy\plugins" />
-      <recent name="D:\jeasy\mvc\lib" />
-      <recent name="D:\jeasy\application\controller" />
     </key>
   </component>
   <component name="RunManager">
@@ -350,6 +369,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -378,20 +402,20 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3806735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3215859" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3215859" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -429,16 +453,163 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/test.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toJE.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="230" column="9" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/assistantFun.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/JEasy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/ErrorController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/TestController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+          <folding>
+            <marker date="1483408232800" expanded="true" signature="722:741" placeholder="SELECT * FRO..user1..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/test.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toJE.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/core/View.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+          <folding>
+            <element signature="e#7#118#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="230" column="9" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/JEasy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/ErrorController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/smarty/demo/configs/test.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20504732">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -446,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34876034">
           <caret line="72" column="27" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -466,14 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Users/lenovo/Desktop/a.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41114983">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_c.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.44132233">
@@ -486,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46115702">
           <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -494,7 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47768596">
           <caret line="888" column="20" selection-start-line="888" selection-start-column="20" selection-end-line="888" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -502,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -510,67 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="20.37931">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/ErrorController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.75862">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.862069">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/TestController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.862069">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <marker date="1482476001128" expanded="true" signature="722:741" placeholder="SELECT * FRO..user1..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mvc/core/Controller.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-55.58621">
-          <caret line="62" column="25" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mvc/core/MVC.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.689655">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mvc/core/Router.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-133.58621">
-          <caret line="149" column="65" selection-start-line="149" selection-start-column="65" selection-end-line="149" selection-end-column="65" />
-          <folding>
-            <element signature="e#6#119#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mvc/lib/SmartyJE.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8965517">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -578,23 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.137932">
           <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mvc/JEasy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-51.103447">
-          <caret line="57" column="100" selection-start-line="57" selection-start-column="74" selection-end-line="57" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.689655">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -602,10 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-67.34426">
           <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-          <folding>
-            <element signature="e#7#88#0#PHP" expanded="true" />
-            <marker date="1482479910821" expanded="true" signature="775:809" placeholder="SELECT wrong..wrongtable..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -613,36 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-39.448277">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <marker date="1482480069752" expanded="true" signature="494:532" placeholder="SELECT ${$fi..${$table}..." />
-            <marker date="1482480069752" expanded="true" signature="959:1003" placeholder="UPDATE ${$ta..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mvc/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.137931">
-          <caret line="230" column="9" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mvc/core/View.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.137932">
-          <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
-          <folding>
-            <element signature="e#7#118#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/api/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.862069">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -650,6 +697,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/test.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.275862">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/ErrorController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/assistantFun.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.413794">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -662,10 +741,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/test.tpl">
+    <entry file="file://$PROJECT_DIR$/mvc/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29307568">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state vertical-scroll-proportion="8.410628">
+          <caret line="285" column="9" selection-start-line="285" selection-start-column="9" selection-end-line="285" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/lib/SmartyJE.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8965517">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/core/View.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.8888888">
+          <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+          <folding>
+            <element signature="e#7#118#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/TestController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.827587">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <marker date="1483408232800" expanded="true" signature="722:741" placeholder="SELECT * FRO..user1..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.75862">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/core/Router.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4262295">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/JEasy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.75862">
+          <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_superglobals.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.5172415">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/core/Controller.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.0491805">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/lib/Request.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.137931">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvc/core/MVC.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66827697">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>

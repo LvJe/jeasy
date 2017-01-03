@@ -11,14 +11,21 @@
  */
 class MVC
 {
-    public static function  handle($pathInfo, $method, $params=[]){
-        $router=new Router($pathInfo,$method,$params);
+    public static $request;
+    public static function  handle(Request $request=null){
+        if(isset($request)){
+            self::$request=$request;
+        }else{
+            self::$request=new Request();
+        }
+        $router=new Router(self::$request->path_info());
+
         $controller=$router->controller;
         $action=$router->action;
-        $method=$router->method;
-        $params=$router->parameters;//array数组是引用，貌似这里没必要写 -xhj
+        $params=$router->parameters;
 
-        $controller->doAction($action, $method, $params);
+
+        $controller->doAction($action, self::$request->method(), array_merge($params,$request->input_post(),$request->input_post()));
 
         /*$forward = $this->controller->forward();
         //如果在执行Action过程中进行页面跳转，则无需调用View显示

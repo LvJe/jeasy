@@ -19,7 +19,6 @@ class Router
     public $action;
     public $pathInfo = '/';
 
-    public $method;
     public $parameters=array();
 
     //public $controllerName;
@@ -28,11 +27,8 @@ class Router
     /**
      * Engine constructor.
      */
-    public function __construct($pathInfo='/',$method='GET',$parameters=array()){
+    public function  __construct($pathInfo='/'){
         if(is_string($pathInfo)&&trim($pathInfo)!='') $this->pathInfo=$pathInfo;
-        if(is_string($method)&&trim($method)!='') $this->method=strtoupper($method);
-        if(is_array($parameters)) $this->parameters=array_merge($this->parameters,$parameters);
-
         $this->_route();
     }
 
@@ -107,7 +103,7 @@ class Router
         if(is_null($this->action)||$this->action=='')
             $this->action=self::$defaultAction;
         /* 解析GET POST参数 */
-        $this->parameters = array_merge( $_GET, $_POST,$this->parameters);
+        //$this->parameters = array_merge( $_GET, $_POST,$this->parameters);//删除-je
     }
 
     /**

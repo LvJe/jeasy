@@ -58,10 +58,9 @@ V('languages', array('en_US'=>_('English'), 'zh_CN'=>_('Chinese Simple')));*/
 $pathInfo = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : (isset($_SERVER['ORIG_PATH_INFO']) ? $_SERVER['ORIG_PATH_INFO'] : '');
 $method = $_SERVER['REQUEST_METHOD'];
 $params = array_merge($_GET, $_POST);
-
 /* 处理请求 */
-
-    $response = MVC::Handle($pathInfo, $method, $params);
+$request=new Request();
+$response = MVC::Handle($request);
 
 
 /*记录访问量*/

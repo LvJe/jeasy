@@ -29,14 +29,22 @@ class TestController extends Controller
         }
         var_dump($res->fetch());
         var_dump($res->fetch());*/
-        echo $_SERVER['PHP_SELF'].'<br>';
-        echo $_SERVER['SCRIPT_NAME'].'<br>';
-        echo $_SERVER['SERVER_ADDR'].'<br>';
-        echo $_SERVER['SERVER_NAME'].'<br>';
-        echo $_SERVER['HTTP_HOST'].'<br>';
-        echo $_SERVER['PATH_INFO'].'<br>';
-        echo $_SERVER['ORIG_PATH_INFO'].'<br>';
-        echo  $_SERVER['REQUEST_URI'] ;
-        return 'test';
+
+        /*
+        //http://127.0.0.1:85/test/index/kk/kk/index.php?hh=hh
+        echo $_SERVER['PHP_SELF'].'<br>'; //  /index.php/test/index/kk/kk/index.php
+        echo $_SERVER['SCRIPT_NAME'].'<br>';//  /index.php
+        echo $_SERVER['SERVER_ADDR'].'<br>';//  127.0.0.1
+        echo $_SERVER['SERVER_NAME'].'<br>';//  127.0.0.1
+        echo $_SERVER['HTTP_HOST'].'<br>';//  127.0.0.1:85
+        echo $_SERVER['PATH_INFO'].'<br>';//  /test/index/kk/kk/index.php
+        echo $_SERVER['ORIG_PATH_INFO'].'<br>';// null
+        echo $_SERVER['QUERY_STRING'].'<br>';//  hh=hh
+        echo  $_SERVER['REQUEST_URI'] ;//  /test/index/kk/kk/index.php?hh=hh
+        */
+
+        global $request;
+        var_dump($request->input_get(['id','qq'=>['123'],'tt'=>'234']));
+
     }
 }
