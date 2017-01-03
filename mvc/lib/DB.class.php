@@ -43,16 +43,16 @@ class DB
      * 构造函数
      * Model constructor.
      * @param string $instance
-     * @throws Exception
+     * @throws PDOException
      */
     public static function getConnection($instance='default'){
         if(!is_string($instance))
-            throw new Exception( "instance must be string",500);
+            throw new JException( "instance must be string",500);
         if(!isset(self::$_connections[$instance])){
             //读取数据库配置
             $config = C('database');
             if (!is_array($config[$instance]))
-                throw new Exception( "$instance config must be array",500);
+                throw new JException( "$instance config must be array",500);
             //连接数据库
             $db = $config[$instance];
             $type=$db['type'];
@@ -95,13 +95,14 @@ class DB
      * 执行数据库操作，返回影响行数
      * @param $sql
      * @return int|null
-     * @throws Exception
+     * @throws PDOException
      */
     protected function _execute($sql){
         $dbh=self::getConnection($this->_conName);
+
         $num = $dbh->exec($sql);
-        if(FALSE === $num)
-            throw new PDOException(var_export($dbh->errorInfo(), true));
+        /*if(FALSE === $num)
+            throw new PDOException(var_export($dbh->errorInfo(), true));*/
         return $num;
     }
 
@@ -109,15 +110,15 @@ class DB
      * 查询数据库，并以数组方式返回
      * @param $sql
      * @return array|null
-     * @throws Exception
+     * @throws PDOException
      */
     protected function _query($sql){
         $dbh=self::getConnection($this->_conName);
 
         $res = $dbh->query($sql);
         //如果产生SQL语句错误，直接抛出
-        if(FALSE === $res)
-            throw new PDOException(var_export($dbh->errorInfo(), true));
+        /*if(FALSE === $res)
+            throw new PDOException(var_export($dbh->errorInfo(), true));*/
         return $res->fetchAll(PDO::FETCH_ASSOC); //不返回数字索引
     }
 
@@ -126,17 +127,18 @@ class DB
      * @param $sql
      * @param array|null $params
      * @return mixed
-     * @throws Exception
+     * @throws PDOException
      */
     protected function _prepareExecute($sql, array $params=null){
         $dbh=self::getConnection($this->_conName);
+
         $ps = $dbh->prepare($sql);
-        if(FALSE === $ps)
-            throw new PDOException(var_export($dbh->errorInfo(), true));
+        /*if(FALSE === $ps)
+            throw new PDOException(var_export($dbh->errorInfo(), true));*/
 
         $ret = $ps->execute($params);
-        if(FALSE === $ret)
-            throw new PDOException(var_export($ps->errorInfo(), true));
+        /*if(FALSE === $ret)
+            throw new PDOException(var_export($ps->errorInfo(), true));*/
         return $ret;
     }
 
@@ -145,24 +147,24 @@ class DB
      * @param $sql
      * @param array|null $params
      * @return mixed
-     * @throws Exception
+     * @throws PDOException
      */
     protected function _prepareQuery($sql, array $params=null){
         $dbh=self::getConnection($this->_conName);
         $ps = $dbh->prepare($sql);
-        if(FALSE === $ps)
-            throw new PDOException(var_export($dbh->errorInfo(), true));
+        /*if(FALSE === $ps)
+            throw new PDOException(var_export($dbh->errorInfo(), true));*/
 
         $ret = $ps->execute($params);
-        if(FALSE === $ret)
-            throw new PDOException(var_export($ps->errorInfo(), true));
+        /*if(FALSE === $ret)
+            throw new PDOException(var_export($ps->errorInfo(), true));*/
         return $ps->fetchAll(PDO::FETCH_ASSOC); //不返回数字索引
     }
 
     /**
      * 获取插入操作生成的自增ID
      * @return int|string
-     * @throws Exception
+     * @throws PDOException
      */
     protected function _lastInsertId(){
         $dbh=self::getConnection($this->_conName);
@@ -183,7 +185,7 @@ class DB
     /**
      * 提交数据库操作
      * @return bool
-     * @throws Exception
+     * @throws PDOException
      */
     public function commit(){
         $dbh=self::getConnection($this->_conName);
@@ -193,7 +195,7 @@ class DB
     /**
      * 回退数据库操作
      * @return bool
-     * @throws Exception
+     * @throws PDOException
      */
     public function rollback(){
         $dbh=self::getConnection($this->_conName);

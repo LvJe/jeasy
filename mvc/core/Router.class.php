@@ -125,7 +125,7 @@ class Router
      * @param $className
      * @param $classFile
      * @return instance of Controller
-     * @throws Exception
+     * @throws JException
      */
     protected function createController($className,$classFile){
         if(file_exists($classFile)){
@@ -135,15 +135,15 @@ class Router
                 $controller=new $className();
                 //如果不是Controller的子类，则抛出异常
                 if(!($controller instanceof Controller)){
-                    throw new Exception('Specific Controller is not a really Controller.',500);
+                    throw new JException('Specific Controller is not a really Controller.',500);
                 }
                 //暂时去掉 $controller->controller = $className; //指定Controller的名称
             }else {
-                throw new Exception("Create instance of $className failed.",500);
+                throw new JException("Create instance of $className failed.",500);
             }
             return $controller;
         }else{
-            throw new Exception("Cannot find specific Controller",404);
+            throw new JException("Cannot find specific Controller",404);
         }
     }
 }

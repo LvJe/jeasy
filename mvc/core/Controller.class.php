@@ -19,7 +19,7 @@ abstract class Controller
      * @param $action
      * @param $method
      * @param array $params
-     * @throws Exception
+     * @throws JException
      */
     public function doAction($action, $method, $params=[]){
         $method = strtolower($method);
@@ -32,7 +32,7 @@ abstract class Controller
             $func = $action.'_'.$method;
         } else {
             //找不到Action
-            throw new Exception( 'Can not find action：'.$action,500);
+            throw new JException( 'Can not find action：'.$action,500);
         }
 
         //参数复制

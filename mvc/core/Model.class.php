@@ -14,11 +14,11 @@ class Model extends DB
      * @param $field
      * @param $id
      * @return null
-     * @throws Exception
+     * @throws JException
      */
     protected function _queryFieldById($table, $field, $id){
         if(!is_string($table) || !is_string($field) || !is_int($id))
-            throw new Exception('Parameters invalid.');
+            throw new JException('Parameters invalid.');
 
         $res = $this->_prepareQuery(
             "SELECT $field FROM $table WHERE id=:id ",
