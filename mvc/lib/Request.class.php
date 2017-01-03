@@ -9,9 +9,9 @@
 class Request
 {
     protected $_pathInfo;
+    protected $_method;
     protected $_get;
     protected $_post;
-    protected $_method;
     public function path_info(){
         return isset($this->_pathInfo)?$this->_pathInfo:$this->_pathInfo=
             isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : (isset($_SERVER['ORIG_PATH_INFO']) ? $_SERVER['ORIG_PATH_INFO'] : '');
@@ -21,6 +21,18 @@ class Request
             $_SERVER['REQUEST_METHOD'];
     }
 
+    /**
+     * @param string $path_info
+     * @param string $method
+     * @param array|null $get
+     * @param array|null $post
+     */
+    public function custom($path_info='/',$method='get',array $get=null,array $post=null){
+        $this->_pathInfo=$path_info;
+        $this->_method=$method;
+        $this->_get=$get;
+        $this->_post=$post;
+    }
     /**
      * @param null $name
      * @return array
@@ -54,28 +66,28 @@ class Request
     }
     public function input_post($name=null,$default=null){
         //TODO 统一处理，trim（，XSS防御）
-        if(is_null($this->_get)) {
-            $this->_get=$_GET;
-            foreach($this->_get as $k=>$v){
-                $this->_get[$k]=trim($v);
+        if(is_null($this->_post)) {
+            $this->_post=$_POST;
+            foreach($this->_post as $k=>$v){
+                $this->_post[$k]=trim($v);
             }
         }
 
         if(is_null($name))
-            return $this->_get;
+            return $this->_post;
         if(is_array($name)){
             $arr=array();
             foreach($name as $k=>$v){
                 if(is_int($k))
-                    $arr[$v]=$this->_get[$v];
+                    $arr[$v]=$this->_post[$v];
                 else
-                    $arr[$k]=isset($this->_get[$k])?$this->_get[$k]:$v;
+                    $arr[$k]=isset($this->_post[$k])?$this->_post[$k]:$v;
             }
             return $arr;
         }
 
         if(is_string($name))
-            return isset($this->_get[$name])?$this->_get[$name]:$default;
+            return isset($this->_post[$name])?$this->_post[$name]:$default;
     }
 
     public function input_all(){

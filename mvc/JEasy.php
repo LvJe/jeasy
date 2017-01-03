@@ -60,8 +60,14 @@ $method = $_SERVER['REQUEST_METHOD'];
 $params = array_merge($_GET, $_POST);
 /* 处理请求 */
 $request=new Request();
-$response = MVC::Handle($request);
 
+try{
+    //throw new Exception('界面找不到',404);//test for ExceptionPages
+    $response = MVC::Handle($request);
+}catch (Exception $e){
+    $request->custom("/error", $method, array('code'=>$e->getCode(), 'error'=>$e->getMessage()));
+    $response = MVC::Handle($request);
+}
 
 /*记录访问量*/
 /*if(is_null($_SESSION['visit'])){

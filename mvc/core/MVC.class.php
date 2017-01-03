@@ -25,8 +25,9 @@ class MVC
         $params=$router->parameters;
 
 
-        $controller->doAction($action, self::$request->method(), array_merge($params,$request->input_post(),$request->input_post()));
-
+        $controller->doAction($action, self::$request->method(), array_merge($params,self::$request->input_get(),self::$request->input_post()));
+       // var_export($request);
+      //  exit;
         /*$forward = $this->controller->forward();
         //如果在执行Action过程中进行页面跳转，则无需调用View显示
         if(is_array($forward)){

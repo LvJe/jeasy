@@ -3,11 +3,11 @@
 class ErrorController extends Controller
 {
     public $code;
-
-    public function show(){
-        $this->assign($this->parameters);
-
+    public $error;
+    public function index(){
+        $error=trim($this->error);
         $code = intval($this->code);
+        $this->assign($this->parameters);
         switch ($code){
             case 403:
                 send_http_status(403);
