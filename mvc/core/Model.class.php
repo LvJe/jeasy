@@ -8,6 +8,8 @@
  */
 class Model extends DB
 {
+    protected $table;
+    protected $table1;
     /**
      * 按ID查询某表中的一个字段
      * @param $table
@@ -16,6 +18,14 @@ class Model extends DB
      * @return null
      * @throws JException
      */
+    public function __construct($instance = 'default')
+    {
+
+        parent::__construct($instance);
+        $className=get_called_class(); // 或者get_class($this);
+        $this->table = strtolower(substr($className,0,strlen($className)-5));
+    }
+
     protected function _queryFieldById($table, $field, $id){
         if(!is_string($table) || !is_string($field) || !is_int($id))
             throw new JException('Parameters invalid.');

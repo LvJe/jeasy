@@ -43,8 +43,18 @@ class TestController extends Controller
         echo  $_SERVER['REQUEST_URI'] ;//  /test/index/kk/kk/index.php?hh=hh
         */
 
-        global $request;
-        var_dump($request->input_get(['id','qq'=>['123'],'tt'=>'234']));
+        /*
+        $regex='#^/type/(?<type>\w+)/id/(?<id>[0-9]+)$#i';
+        $str='/type/topic/id/11';
+        if(preg_match($regex,$str,$matches)){
+            var_export($matches);
+        }
+        */
 
+       //var_dump(MVC::$request->input_get());
+        //$date=date('Y-m-d H:i:s',getTimeStamp());
+
+        $um=new TestModel();
+        $um->test();
     }
 }

@@ -24,3 +24,16 @@ function IsSSL()
     }
     return false;
 }
+//获取时间戳
+function getTimeStamp() {
+    $MicroTime = microtime();
+    $MicroTime = explode(' ', $MicroTime);
+    $MicroTime = $MicroTime[1] + $MicroTime[0];
+    return $MicroTime;
+}
+function getTimeStamp2() {
+    $timestr = microtime();
+    $timestrary = explode(' ', $timestr);
+    $result = intval($timestrary[1])*1000 + intval(floatval($timestrary[0])*1000);
+    return $result;
+}

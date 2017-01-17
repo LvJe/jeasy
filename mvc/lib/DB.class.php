@@ -81,8 +81,9 @@ class DB
         unset(self::$_connections[$instance]);
     }
 
-    public function __construct($instance = 'default'){
-        $dbh=self::getConnection('default');
+    public function __construct($instance = 'default')
+    {
+        //$dbh=self::getConnection($instance);
         $this->_conName=$instance;
     }
 

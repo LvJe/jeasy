@@ -33,11 +33,13 @@ define('CONTEXT_PATH', substr($_SERVER['SCRIPT_NAME'], 0, strrpos($_SERVER['SCRI
 require_once "functions.php";
 require_once 'autoLoader.php';
 
+
 /* 开启SESSION */
 session_start();
 
 /* 设置时区 为 中国 */
 date_default_timezone_set('PRC');
+//Asia/Chongqing ，Asia/Shanghai
 
 /* 读入配置文件 */
 $config = LoadIni(MVC_PATH.'config/cute.ini');
