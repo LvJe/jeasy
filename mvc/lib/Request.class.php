@@ -2,7 +2,7 @@
 
 /**
  * Created by PhpStorm.
- * User: lenovo
+ * User: JE
  * Date: 2017-01-02
  * Time: 16:54
  */
@@ -26,6 +26,7 @@ class Request
      * @param string $method
      * @param array|null $get
      * @param array|null $post
+     * 自定义request
      */
     public function custom($path_info='/',$method='get',array $get=null,array $post=null){
         $this->_pathInfo=$path_info;
@@ -33,10 +34,13 @@ class Request
         $this->_get=$get;
         $this->_post=$post;
     }
+    public function custom_get($get=null){
+        $this->_get=$get;
+    }
     /**
      * @param null $name
      * @return array
-     *
+     * 获取到get数据
      */
     public function input_get($name=null,$default=null){
         //TODO 统一处理，trim（，XSS防御）

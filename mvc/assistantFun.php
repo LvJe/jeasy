@@ -37,3 +37,15 @@ function getTimeStamp2() {
     $result = intval($timestrary[1])*1000 + intval(floatval($timestrary[0])*1000);
     return $result;
 }
+
+function getRandomString($len=6, $chars=null)
+{
+    if (is_null($chars)){
+        $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_";
+    }
+    mt_srand(10000000*(double)microtime());
+    for ($i = 0, $str = '', $lc = strlen($chars)-1; $i < $len; $i++){
+        $str .= $chars[mt_rand(0, $lc)];
+    }
+    return $str;
+}

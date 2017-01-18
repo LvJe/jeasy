@@ -7,7 +7,7 @@ class ErrorController extends Controller
     public function index(){
         $error=trim($this->error);
         $code = intval($this->code);
-        $this->assign($this->parameters);
+        $this->assign($this->input_all());
         switch ($code){
             case 403:
                 send_http_status(403);

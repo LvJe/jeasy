@@ -42,7 +42,7 @@ date_default_timezone_set('PRC');
 //Asia/Chongqing ，Asia/Shanghai
 
 /* 读入配置文件 */
-$config = LoadIni(MVC_PATH.'config/cute.ini');
+$config = LoadIni(MVC_PATH.'config/config.ini');
 if(is_array($config))
     C($config);
 /* 读入数据库配置文件 */
