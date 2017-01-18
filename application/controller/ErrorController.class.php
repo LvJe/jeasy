@@ -15,9 +15,9 @@ class ErrorController extends Controller
             case 404:
                 send_http_status(404);
                 return '404';
-            case 500:
+            /*case 500:
                 send_http_status(500);
-                return '500';
+                return '500';*/
             default:
                 return 'error';
         }

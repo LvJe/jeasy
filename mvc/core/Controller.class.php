@@ -2,13 +2,14 @@
 
 abstract class Controller
 {
+    protected $_request;
     protected $_forward = null;
 
     protected $_view = null;
     protected $_page = null;
 
     public $controller = '';
-    public $parameters = array();
+    //public $parameters = array();
 
     public function __construct(){
         $this->_view = new View();
@@ -21,9 +22,12 @@ abstract class Controller
      * @param array $params
      * @throws JException
      */
-    public function doAction($action, $method, $params=[]){
-        $method = strtolower($method);
+    // $controller->doAction($action,, array_merge($params,self::$request->input_get(),self::$request->input_post()));
 
+    public function doAction($action, Request $request){
+        $this->_request=$request;
+
+        $method = strtolower($request->method());
         $func = '';
         //默认处理
         if(method_exists($this, $action)) {
@@ -36,17 +40,26 @@ abstract class Controller
         }
 
         //参数复制
-        $this->parameters = $params;
+        $params = $request->input_all();
         //将参数赋值给对应的成员变量
         foreach($params as $k=>$v){
             //排除以下划开始的内置成员变量
             if(is_string($k) && strlen($k)>0 && substr($k, 0, 1) != '_')
                 $this->{$k} = $v;
         }
+        $_get = $request->input_get();
+        foreach($_get as $k=>$v){
+                $this->{$k.'_get'} = $v;
+        }
+        $_post=$request->input_post();
+        foreach($_post as $k=>$v){
+            $this->{$k.'_post'} = $v;
+        }
+
 
         //调用子类中的预处理
         if(method_exists($this, '_initialize'))
-            call_user_func(array($this, '_initialize'));
+            call_user_func(array($this, '_initialize'),$request);
 
         //调用子类中自定义的action处理
         $this->_page = call_user_func(array($this, $func));
@@ -129,4 +142,14 @@ abstract class Controller
         set_time_limit($sec);
     }
 
+    /******************* request method *****************/
+    public function input_get($name=null,$default=null){
+        return $this->_request->input_get($name,$default);
+    }
+    public function input_post($name=null,$default=null){
+        return $this->_request->input_post($name,$default);
+    }
+    public function input_all(){
+        return $this->_request->input_all();
+    }
 }

@@ -9,7 +9,6 @@
 class Model extends DB
 {
     protected $table;
-    protected $table1;
     /**
      * 按ID查询某表中的一个字段
      * @param $table
@@ -18,6 +17,7 @@ class Model extends DB
      * @return null
      * @throws JException
      */
+
     public function __construct($instance = 'default')
     {
 
@@ -54,6 +54,15 @@ class Model extends DB
         return $this->_prepareExecute(
             "UPDATE $table SET $field=:value WHERE id=:id ",
             [":value"=>$value, ':id'=>$id]);
+    }
+
+    public function count(){
+        $res=$this->_prepareQuery("SELECT count(*) FROM $this->table WHERE valid=1");
+        return $res[0]['count(*)'];
+    }
+
+    public function listAll($offset, $length){
+        return $this->_prepareQuery("SELECT * FROM user WHERE valid=1 LIMIT $offset, $length ");
     }
 
 }

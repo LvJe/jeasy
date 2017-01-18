@@ -12,20 +12,31 @@
 class MVC
 {
     public static $request;
+
+    /**
+     * @param Request|null $request
+     * @return mixed
+     *
+     * 可以传入外部自定义的request;
+     * 也可以传入null内部会new一个新的Request实例;
+     */
+
+    //TODO 传入数组，支持内部自定义request
     public static function  handle(Request $request=null){
         if(isset($request)){
             self::$request=$request;
         }else{
-            self::$request=new Request();
+            self::$request=isset(self::$request)?self::$request:new Request();
         }
         $router=new Router(self::$request->path_info());
 
         $controller=$router->controller;
         $action=$router->action;
-        $params=$router->parameters;
+        $path_params=$router->parameters;
 
-
-        $controller->doAction($action, self::$request->method(), array_merge($params,self::$request->input_get(),self::$request->input_post()));
+        $_get=self::$request->input_get();
+        self::$request->custom_get(array_merge($path_params,$_get));
+        $controller->doAction($action,self::$request);
        // var_export($request);
       //  exit;
         /*$forward = $this->controller->forward();
