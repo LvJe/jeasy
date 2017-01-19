@@ -5,6 +5,18 @@
  * Time: 17:12
  */
 define('J_EASY','1.0.0_alpha');
+define('COOKIE_PREFIX','shareGO_');
+define('SITE_NAME','shareGo');
+
+// Salt for Cookie and Form Free to modify
+define('SALT', 'shareGoOfJE');
+
+/*********************** 分界线 ***********************/
+
+//Initialize timer
+$MicroTime = explode(' ', microtime());
+$StartTime = $MicroTime[1] + $MicroTime[0];
+$TimeStamp = $_SERVER['REQUEST_TIME'];
 
 defined('MVC_PATH')  or define('MVC_PATH',    ROOT_PATH.'mvc'.DIRECTORY_SEPARATOR);
 defined('APP_PATH')   or define('APP_PATH',     ROOT_PATH.'application'.DIRECTORY_SEPARATOR);

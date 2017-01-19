@@ -26,6 +26,29 @@ class Model extends DB
         $this->table = strtolower(substr($className,0,strlen($className)-5));
     }
 
+
+    public function count(){
+        $res=$this->_prepareQuery("SELECT count(*) FROM ". $this->table." WHERE valid=1");
+        return $res[0]['count(*)'];
+    }
+
+    public function listAll($offset, $length){
+        return $this->_prepareQuery("SELECT * FROM ". $this->table." WHERE valid=1 LIMIT $offset, $length ");
+    }
+
+    public function queryFirstBy($field,$value){
+        if(!is_string($field)) throw new JException('Parameters invalid.');
+        $res = $this->_prepareQuery(
+            "SELECT * FROM  ". $this->table."  WHERE ". $field ."=:val  LIMIT 0, 1 ",
+            [':val'=>$value]);
+        if(count($res) > 0)
+            return $res[0];
+        return null;
+    }
+
+
+
+
     protected function _queryFieldById($table, $field, $id){
         if(!is_string($table) || !is_string($field) || !is_int($id))
             throw new JException('Parameters invalid.');
@@ -39,8 +62,6 @@ class Model extends DB
         else
             return null;
     }
-
-
     /**
      * 按ID修改某表中的一个字段
      * @param $table
@@ -55,14 +76,4 @@ class Model extends DB
             "UPDATE $table SET $field=:value WHERE id=:id ",
             [":value"=>$value, ':id'=>$id]);
     }
-
-    public function count(){
-        $res=$this->_prepareQuery("SELECT count(*) FROM $this->table WHERE valid=1");
-        return $res[0]['count(*)'];
-    }
-
-    public function listAll($offset, $length){
-        return $this->_prepareQuery("SELECT * FROM user WHERE valid=1 LIMIT $offset, $length ");
-    }
-
 }
