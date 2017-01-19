@@ -152,4 +152,8 @@ abstract class Controller
     public function input_all(){
         return $this->_request->input_all();
     }
+    /************************ common method *************************/
+    public function assign_csrf_token(){
+        $this->assign('csrf_token',Authority::CSRF_Token());
+    }
 }

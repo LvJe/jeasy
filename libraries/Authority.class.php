@@ -76,6 +76,15 @@ class Authority
         setcookie(COOKIE_PREFIX.'username', '', time()-3600*24*15, '/');
         setcookie(COOKIE_PREFIX.'password', '', time()-3600*24*15, '/');
     }
+    /**
+     * Get user from session
+     * @return array | null
+     */
+    public static function GetUser(){
+        if(self::CheckLogin())
+            return $_SESSION['user'];
+        return null;
+    }
 
     /**
      * Check login status, and login automatically from cookie.
@@ -107,18 +116,8 @@ class Authority
     }
 
     /**
-     * Get user from session
-     * @return array | null
-     */
-    public static function GetUser(){
-        if(self::CheckLogin())
-            return $_SESSION['user'];
-        return null;
-    }
-
-    /**
-     * Test login
-     * @throws CuteException
+     * 测试用户登录状态
+     * 不登录则抛出异常
      */
     public static function TestLogin(){
         if(!self::CheckLogin())
@@ -143,31 +142,41 @@ class Authority
         }
         return false;
     }
-
-    /**
-     * Test privilege
-     * @param $privilege
-     * @throws CuteException
+    /*
+     * 测试用户权限，不用过则抛出异常
      */
     public static function TestPrivilege($privilege){
         if(!self::CheckPrivilege($privilege))
             throw new JException( "You are unauthorised",403);
     }
 
-    // 获得表单校验散列
+    /**
+     * 获取和鉴定表单校验散列
+     * note:一定要先测试token再登录，切记切记
+     */
     public static function CSRF_Token()
     {
         if (self::CheckLogin())
-            return substr(md5(SITE_NAME . $_SESSION['user']['password'].$_SESSION['user']['salt']. SALT), 8, 8);
+            $generated_token= substr(md5(SITE_NAME . $_SESSION['user']['password'].$_SESSION['user']['salt']. SALT), 8, 8);
         else
-            return substr(md5(SITE_NAME . SALT), 8, 8);
+            $generated_token= substr(md5(SITE_NAME . SALT), 8, 8);
+        return $generated_token;
     }
+    public static function TestCSRF(){
+        if(MVC::$request->input_post('csrf_token')!=self::CSRF_Token())
+            throw new JException('csrf_token error.',403);
+    }
+
     //来源检查
-    public static function CheckRefer($csrf_token)
+    public static function CheckRefer()
     {
-        if (empty($_SERVER['HTTP_REFERER'] || $csrf_token != self::CSRF_Token() || preg_replace("/https?:\/\/([^\:\/]+).*/i", "\\1", $_SERVER['HTTP_REFERER']) !== preg_replace("/([^\:]+).*/", "\\1", $_SERVER['HTTP_HOST'])))
+        if (empty($_SERVER['HTTP_REFERER'] || preg_replace("/https?:\/\/([^\:\/]+).*/i", "\\1", $_SERVER['HTTP_REFERER']) !== preg_replace("/([^\:]+).*/", "\\1", $_SERVER['HTTP_HOST'])))
             return false;
         else
             return true;
+    }
+    public static function TestRefer(){
+        if(!self::CheckRefer())
+            throw new JException( "you have use an error refer.",403);
     }
 }

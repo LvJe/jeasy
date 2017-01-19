@@ -66,7 +66,11 @@ class View
                         $template->assign($this->_model);
                         $template->assign('HOST_ADDRESS', HOST_ADDRESS); //主机地址
                         $template->assign('CONTEXT_PATH', CONTEXT_PATH); //项目目录
-                        $content = $template->render($data . TPL_EXT);//, $this->_model
+                        //TODO 多个页面共享数据的功能 暂时把user数据共享写在这里；
+                        if(Authority::CheckLogin()){
+                            $template->assign('user',Authority::GetUser());
+                        }
+                        $content = $template->render($data . TPL_EXT);
                     }
                 }else{
                     $content = var_export(isset($data) ? $data : $this->_model, true);
