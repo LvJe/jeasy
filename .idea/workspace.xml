@@ -19,6 +19,7 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="jeasy" />
   </component>
@@ -40,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/mvc/core/View.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="2.2190015">
-              <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+              <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -72,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/mvc/core/Controller.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="90.55173">
-              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -151,7 +152,6 @@
         <option value="$PROJECT_DIR$/mvc/autoLoader.php" />
         <option value="$PROJECT_DIR$/templates/index.tpl" />
         <option value="$PROJECT_DIR$/mvc/lib/Template.class.php" />
-        <option value="$PROJECT_DIR$/mvc/core/View.class.php" />
         <option value="$PROJECT_DIR$/mvc/lib/DB.php" />
         <option value="$PROJECT_DIR$/mvc/lib/SmartyJE.class.php" />
         <option value="$PROJECT_DIR$/application/controller/api/IndexController.class.php" />
@@ -173,6 +173,7 @@
         <option value="$PROJECT_DIR$/mvc/lib/DB.class.php" />
         <option value="$PROJECT_DIR$/mvc/core/Model.class.php" />
         <option value="$PROJECT_DIR$/application/controller/ErrorController.class.php" />
+        <option value="$PROJECT_DIR$/mvc/core/View.class.php" />
       </list>
     </option>
   </component>
@@ -745,7 +746,7 @@
     <entry file="file://$PROJECT_DIR$/mvc/core/Controller.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="90.55173">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -783,7 +784,7 @@
     <entry file="file://$PROJECT_DIR$/mvc/core/View.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.2190015">
-          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+          <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
           <folding />
         </state>
       </provider>
