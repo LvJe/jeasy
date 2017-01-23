@@ -54,7 +54,8 @@ class TestController extends Controller
        //var_dump(MVC::$request->input_get());
         //$date=date('Y-m-d H:i:s',getTimeStamp());
 
-        $um=new TestModel();
-        $um->test();
+        /*$um=new TestModel();
+        $um->test();*/
+        phpinfo();
     }
 }
