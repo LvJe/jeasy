@@ -27,9 +27,8 @@
  * 2017-01-23
  *      增加通用的插入方法public function create_c()
  */
-class Model extends DB
+class Model
 {
-    protected $table;
     /**
      * 按ID查询某表中的一个字段
      * @param $table
@@ -39,13 +38,135 @@ class Model extends DB
      * @throws JException
      */
 
-    public function __construct($instance = 'default')
+    protected $_conName;
+    protected $table;
+    public function __construct($conName = 'default')
     {
 
-        parent::__construct($instance);
+        $this->_conName=$conName;
         $className=get_called_class(); // 或者get_class($this);
         $this->table = strtolower(substr($className,0,strlen($className)-5));
     }
+
+    /**
+     * 执行数据库操作，返回影响行数
+     * @param $sql
+     * @return int|null
+     * @throws PDOException
+     */
+    protected function _execute($sql){
+        $dbh=DB::getConnection($this->_conName);
+
+        $num = $dbh->exec($sql);
+        /*if(FALSE === $num)
+            throw new PDOException(var_export($dbh->errorInfo(), true));*/
+        return $num;
+    }
+
+    /**
+     * 查询数据库，并以数组方式返回
+     * @param $sql
+     * @return array|null
+     * @throws PDOException
+     */
+    protected function _query($sql){
+        $dbh=DB::getConnection($this->_conName);
+
+        $res = $dbh->query($sql);
+        //如果产生SQL语句错误，直接抛出
+        /*if(FALSE === $res)
+            throw new PDOException(var_export($dbh->errorInfo(), true));*/
+        return $res->fetchAll(PDO::FETCH_ASSOC); //不返回数字索引
+    }
+
+    /**
+     * 执行数据库预操作，返回执行结果
+     * @param $sql
+     * @param array|null $params
+     * @return mixed
+     * @throws PDOException
+     */
+    protected function _prepareExecute($sql, array $params=null,$multi=false){
+        $dbh=DB::getConnection($this->_conName);
+
+        $ps = $dbh->prepare($sql);
+        /*if(FALSE === $ps)
+            throw new PDOException(var_export($dbh->errorInfo(), true));*/
+        if(!$multi) {
+            $ret = $ps->execute($params);
+        }else{
+            $ret=array();
+            foreach($params as $param){
+                $ret[] = $ps->execute($param);
+            }
+        }
+        /*if(FALSE === $ret)
+            throw new PDOException(var_export($ps->errorInfo(), true));*/
+        return $ret;
+    }
+
+    /**
+     * 查询数据库，返回查询结果
+     * @param $sql
+     * @param array|null $params
+     * @return mixed
+     * @throws PDOException
+     */
+    protected function _prepareQuery($sql, array $params=null){
+        $dbh=DB::getConnection($this->_conName);
+        $ps = $dbh->prepare($sql);
+        /*if(FALSE === $ps)
+            throw new PDOException(var_export($dbh->errorInfo(), true));*/
+
+        $ret = $ps->execute($params);
+        /*if(FALSE === $ret)
+            throw new PDOException(var_export($ps->errorInfo(), true));*/
+        return $ps->fetchAll(PDO::FETCH_ASSOC); //不返回数字索引
+    }
+
+    /**
+     * 获取插入操作生成的自增ID
+     * @return int|string
+     * @throws PDOException
+     */
+    protected function _lastInsertId(){
+        $dbh=DB::getConnection($this->_conName);
+        return $dbh->lastInsertId();
+    }
+
+
+    /**
+     * 开启一个数据库事务
+     * @return bool
+     * @throws Exception
+     */
+    public function beginTransaction(){
+        $dbh=DB::getConnection($this->_conName);
+        return $dbh->beginTransaction();
+    }
+
+    /**
+     * 提交数据库操作
+     * @return bool
+     * @throws PDOException
+     */
+    public function commit(){
+        $dbh=DB::getConnection($this->_conName);
+        return $dbh->commit();
+    }
+
+    /**
+     * 回退数据库操作
+     * @return bool
+     * @throws PDOException
+     */
+    public function rollBack(){
+        $dbh=DB::getConnection($this->_conName);
+        return $dbh->rollBack();
+    }
+
+
+    /*************- 以下 -**************/
 
 
     public function count(){

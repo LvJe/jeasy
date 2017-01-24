@@ -36,15 +36,9 @@ class DB1
 class DB
 {
     private static  $_connections = array();
-    //private $_connection = null;
-    private $_conName;
+    //防止克隆
+    protected function __clone() {}
 
-    /**
-     * 构造函数
-     * Model constructor.
-     * @param string $instance
-     * @throws PDOException
-     */
     public static function getConnection($instance='default'){
         if(!is_string($instance))
             throw new JException( "instance must be string",500);
@@ -81,126 +75,25 @@ class DB
         unset(self::$_connections[$instance]);
     }
 
-    public function __construct($instance = 'default')
-    {
-        //$dbh=self::getConnection($instance);
-        $this->_conName=$instance;
+    /*
+    //开启所有连接的事务
+    public static function beginTransaction(){
+        foreach(DB::$_connections as $dbh){
+            $dbh->beginTransaction();
+        }
     }
-
-    /**
-     * 防止克隆
-     *
-     */
-    protected function __clone() {}
-    /**
-     * 执行数据库操作，返回影响行数
-     * @param $sql
-     * @return int|null
-     * @throws PDOException
-     */
-    protected function _execute($sql){
-        $dbh=self::getConnection($this->_conName);
-
-        $num = $dbh->exec($sql);
-        /*if(FALSE === $num)
-            throw new PDOException(var_export($dbh->errorInfo(), true));*/
-        return $num;
+    //提交数据库操作
+    public static function commit(){
+        foreach(DB::$_connections as $dbh){
+            $dbh->commit();
+        }
     }
-
-    /**
-     * 查询数据库，并以数组方式返回
-     * @param $sql
-     * @return array|null
-     * @throws PDOException
-     */
-    protected function _query($sql){
-        $dbh=self::getConnection($this->_conName);
-
-        $res = $dbh->query($sql);
-        //如果产生SQL语句错误，直接抛出
-        /*if(FALSE === $res)
-            throw new PDOException(var_export($dbh->errorInfo(), true));*/
-        return $res->fetchAll(PDO::FETCH_ASSOC); //不返回数字索引
+    //回退数据库操作
+    public static function rollBack(){
+        foreach(DB::$_connections as $dbh){
+            $dbh->rollBack();
+        }
     }
-
-    /**
-     * 执行数据库预操作，返回执行结果
-     * @param $sql
-     * @param array|null $params
-     * @return mixed
-     * @throws PDOException
-     */
-    protected function _prepareExecute($sql, array $params=null){
-        $dbh=self::getConnection($this->_conName);
-
-        $ps = $dbh->prepare($sql);
-        /*if(FALSE === $ps)
-            throw new PDOException(var_export($dbh->errorInfo(), true));*/
-
-        $ret = $ps->execute($params);
-        /*if(FALSE === $ret)
-            throw new PDOException(var_export($ps->errorInfo(), true));*/
-        return $ret;
-    }
-
-    /**
-     * 查询数据库，返回查询结果
-     * @param $sql
-     * @param array|null $params
-     * @return mixed
-     * @throws PDOException
-     */
-    protected function _prepareQuery($sql, array $params=null){
-        $dbh=self::getConnection($this->_conName);
-        $ps = $dbh->prepare($sql);
-        /*if(FALSE === $ps)
-            throw new PDOException(var_export($dbh->errorInfo(), true));*/
-
-        $ret = $ps->execute($params);
-        /*if(FALSE === $ret)
-            throw new PDOException(var_export($ps->errorInfo(), true));*/
-        return $ps->fetchAll(PDO::FETCH_ASSOC); //不返回数字索引
-    }
-
-    /**
-     * 获取插入操作生成的自增ID
-     * @return int|string
-     * @throws PDOException
-     */
-    protected function _lastInsertId(){
-        $dbh=self::getConnection($this->_conName);
-        return $dbh->lastInsertId();
-    }
-
-
-    /**
-     * 开启一个数据库事务
-     * @return bool
-     * @throws Exception
-     */
-    public function begin(){
-        $dbh=self::getConnection($this->_conName);
-        return $dbh->beginTransaction();
-    }
-
-    /**
-     * 提交数据库操作
-     * @return bool
-     * @throws PDOException
-     */
-    public function commit(){
-        $dbh=self::getConnection($this->_conName);
-        return $dbh>commit();
-    }
-
-    /**
-     * 回退数据库操作
-     * @return bool
-     * @throws PDOException
-     */
-    public function rollback(){
-        $dbh=self::getConnection($this->_conName);
-        return $dbh->rollBack();
-    }
+    */
 }
 
