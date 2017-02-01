@@ -114,3 +114,19 @@ function SetCookies($CookiesArray, $Expires = 0)
             setcookie(COOKIE_PREFIX.$key, $value, time() + 86400 * $Expires);
     }
 }
+
+//获取数组中的某一列
+function ArrayColumn($Input, $ColumnKey)
+{
+    if (version_compare(PHP_VERSION, '5.5.0') < 0) {
+        $Result = array();
+        if ($Input) {
+            foreach ($Input as $Value) {
+                $Result[] = $Value[$ColumnKey];
+            }
+        }
+        return $Result;
+    } else {
+        return array_column($Input, $ColumnKey);
+    }
+}

@@ -28,7 +28,7 @@
       <file leaf-file-name="TestController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controller/TestController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-52.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
               <folding>
                 <marker date="1485075007376" expanded="true" signature="722:741" placeholder="SELECT * FRO..user1..." />
@@ -40,7 +40,7 @@
       <file leaf-file-name="View.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mvc/core/View.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-47.517242">
+            <state vertical-scroll-proportion="0.0">
               <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
               <folding />
             </state>
@@ -50,11 +50,11 @@
       <file leaf-file-name="DB.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mvc/lib/DB.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.09154929">
+            <state vertical-scroll-proportion="-0.045774646">
               <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
               <folding>
                 <element signature="e#7#88#0#PHP" expanded="true" />
-                <marker date="1484624599070" expanded="true" signature="775:809" placeholder="SELECT wrong..wrongtable..." />
+                <marker date="1485235206166" expanded="true" signature="775:809" placeholder="SELECT wrong..wrongtable..." />
               </folding>
             </state>
           </provider>
@@ -63,7 +63,7 @@
       <file leaf-file-name="ErrorController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controller/ErrorController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.379311">
+            <state vertical-scroll-proportion="0.0">
               <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
               <folding />
             </state>
@@ -73,7 +73,7 @@
       <file leaf-file-name="Controller.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mvc/core/Controller.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="90.55173">
+            <state vertical-scroll-proportion="0.0">
               <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
               <folding />
             </state>
@@ -93,12 +93,12 @@
       <file leaf-file-name="Model.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mvc/core/Model.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.724138">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
               <folding>
-                <marker date="1485155116641" expanded="true" signature="10:13" placeholder=" Created by PhpStorm. ..." />
-                <marker date="1485155116641" expanded="true" signature="2784:2822" placeholder="SELECT ${$fi..${$table}..." />
-                <marker date="1485155116641" expanded="true" signature="3247:3291" placeholder="UPDATE ${$ta..." />
+                <marker date="1485234687873" expanded="true" signature="10:13" placeholder=" Created by PhpStorm. ..." />
+                <marker date="1485234687873" expanded="true" signature="5810:5848" placeholder="SELECT ${$fi..${$table}..." />
+                <marker date="1485234687873" expanded="true" signature="6273:6317" placeholder="UPDATE ${$ta..." />
               </folding>
             </state>
           </provider>
@@ -107,7 +107,7 @@
       <file leaf-file-name="MVC.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mvc/core/MVC.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="21.62069">
+            <state vertical-scroll-proportion="0.0">
               <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
@@ -117,7 +117,7 @@
       <file leaf-file-name="Router.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mvc/core/Router.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-122.82758">
+            <state vertical-scroll-proportion="0.0">
               <caret line="145" column="23" selection-start-line="145" selection-start-column="23" selection-end-line="145" selection-end-column="23" />
               <folding />
             </state>
@@ -168,11 +168,11 @@
         <option value="$PROJECT_DIR$/mvc/functions.php" />
         <option value="$PROJECT_DIR$/application/model/TestModel.class.php" />
         <option value="$PROJECT_DIR$/mvc/config/database.ini" />
-        <option value="$PROJECT_DIR$/mvc/lib/DB.class.php" />
         <option value="$PROJECT_DIR$/mvc/core/Model.class.php" />
         <option value="$PROJECT_DIR$/application/controller/ErrorController.class.php" />
         <option value="$PROJECT_DIR$/mvc/core/View.class.php" />
         <option value="$PROJECT_DIR$/application/controller/TestController.class.php" />
+        <option value="$PROJECT_DIR$/mvc/lib/DB.class.php" />
       </list>
     </option>
   </component>
@@ -222,6 +222,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -307,7 +308,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -371,7 +371,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27314112" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2822458" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -427,7 +427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="230" column="9" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -442,9 +441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
-          <folding>
-            <marker date="1484799816256" expanded="true" signature="9:68" placeholder=" Created by JE.Xie. ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -512,7 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="230" column="9" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -520,9 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
-          <folding>
-            <marker date="1484799816256" expanded="true" signature="9:68" placeholder=" Created by JE.Xie. ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -694,9 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <marker date="1484799816256" expanded="true" signature="9:68" placeholder=" Created by JE.Xie. ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -704,7 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="243" column="25" selection-start-line="243" selection-start-column="25" selection-end-line="243" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -712,7 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="110" column="9" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,7 +721,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controller/ErrorController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.379311">
+        <state vertical-scroll-proportion="0.0">
           <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
           <folding />
         </state>
@@ -742,7 +729,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mvc/core/Controller.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="90.55173">
+        <state vertical-scroll-proportion="0.0">
           <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
           <folding />
         </state>
@@ -750,19 +737,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mvc/core/Model.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.724138">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <marker date="1485155116641" expanded="true" signature="10:13" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1485155116641" expanded="true" signature="2784:2822" placeholder="SELECT ${$fi..${$table}..." />
-            <marker date="1485155116641" expanded="true" signature="3247:3291" placeholder="UPDATE ${$ta..." />
+            <marker date="1485234687873" expanded="true" signature="10:13" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1485234687873" expanded="true" signature="5810:5848" placeholder="SELECT ${$fi..${$table}..." />
+            <marker date="1485234687873" expanded="true" signature="6273:6317" placeholder="UPDATE ${$ta..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mvc/core/MVC.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="21.62069">
+        <state vertical-scroll-proportion="0.0">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
@@ -770,7 +757,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mvc/core/Router.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-122.82758">
+        <state vertical-scroll-proportion="0.0">
           <caret line="145" column="23" selection-start-line="145" selection-start-column="23" selection-end-line="145" selection-end-column="23" />
           <folding />
         </state>
@@ -778,7 +765,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mvc/core/View.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-47.517242">
+        <state vertical-scroll-proportion="0.0">
           <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
           <folding />
         </state>
@@ -786,7 +773,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controller/TestController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-52.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
           <folding>
             <marker date="1485075007376" expanded="true" signature="722:741" placeholder="SELECT * FRO..user1..." />
@@ -796,11 +783,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mvc/lib/DB.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09154929">
+        <state vertical-scroll-proportion="-0.045774646">
           <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
           <folding>
             <element signature="e#7#88#0#PHP" expanded="true" />
-            <marker date="1484624599070" expanded="true" signature="775:809" placeholder="SELECT wrong..wrongtable..." />
+            <marker date="1485235206166" expanded="true" signature="775:809" placeholder="SELECT wrong..wrongtable..." />
           </folding>
         </state>
       </provider>

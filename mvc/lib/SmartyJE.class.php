@@ -10,7 +10,7 @@ require_once ROOT_PATH."plugins/smarty/libs/Smarty.class.php";
  * @param $smarty
  * @return string
  */
-function do_request($params, $smarty){
+function smarty_request($params, $smarty){
     $content = '';
     //extract($params);
     if(isset($params['action'])){
@@ -24,6 +24,12 @@ function do_request($params, $smarty){
         $content = Cute::Handle($pathInfo, $method, $params);
     }
     return $content;
+}
+function smarty_csrf_token_field(){
+    return '<input type="hidden" name="csrf_token" value="'.Authority::CSRF_Token().'">';
+}
+function smarty_csrf_token(){
+    return Authority::CSRF_Token();
 }
 
 /**
@@ -39,7 +45,10 @@ class SmartyJE extends Smarty
         $this->caching = false;
         $this->left_delimiter = "<{";
         $this->right_delimiter = "}>";
-        $this->registerPlugin("function", "request", "do_request");
+        //register_plugins
+        $this->registerPlugin("function", "request", "smarty_request");
+        $this->registerPlugin("function", "csrf_token_field", "smarty_csrf_token_field");
+        $this->registerPlugin("function", "csrf_token", "smarty_csrf_token");
         //setTemplatePath
         $this->setTemplateDir($path);
         $this->setCacheDir($path."tpl_cache");

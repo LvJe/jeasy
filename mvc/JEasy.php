@@ -78,10 +78,24 @@ $request=new Request();
 try{
     //throw new Exception('界面找不到',404);//test for ExceptionPages
     $response = MVC::Handle($request);
-}catch (Exception $e){
+}
+/*catch (Exception $e){
     $request->custom("/error", $method, array('code'=>$e->getCode(), 'error'=>$e->getMessage()));
     $response = MVC::Handle($request);
+}*/
+
+catch (Exception $e){
+    //其他异常打印堆栈
+    $trace = '<table border="0">';
+    $trace .= '<caption>'.$e->getMessage().'</caption>';
+    foreach($e->getTrace() as $error)
+        $trace .= "<tr><td>".$error['class']."</td><td>".$error['function']."</td><td>".$error['file'].":".$error['line']."</td></tr>";
+    $trace .= '</table>';
+    $request->custom("/error", $method, array('code'=>$e->getCode(), 'error'=>$e->getMessage(),'trace'=>$trace));
+    $response = MVC::Handle($request);
 }
+
+
 
 /*记录访问量*/
 /*if(is_null($_SESSION['visit'])){
